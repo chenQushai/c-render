@@ -1,7 +1,7 @@
-# ！！由于内部架构问题，本项目不再做更新，也不修复问题了，本人已投身另一个替代方案的研发，特此通知。
 
 
-# f-render | 基于 ElementUI 的表单设计器
+
+# c-render | 基于 ElementUI 的表单设计器
 
 [![MIT](https://img.shields.io/github/license/dream2023/f-render)](https://github.com/dream2023/f-render)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/f-render)
@@ -14,10 +14,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [交流群](#%E4%BA%A4%E6%B5%81%E7%BE%A4)
-- [介绍](#%E4%BB%8B%E7%BB%8D)
-- [注意](#%E6%B3%A8%E6%84%8F)
-- [特性](#%E7%89%B9%E6%80%A7)
+
 - [Demo](#demo)
 - [教程](#%E6%95%99%E7%A8%8B)
 - [1 分钟快速接入](#1-%E5%88%86%E9%92%9F%E5%BF%AB%E9%80%9F%E6%8E%A5%E5%85%A5)
