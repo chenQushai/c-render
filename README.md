@@ -1,28 +1,15 @@
 
 
 
-# c-render | 基于 ElementUI 的表单设计器
+# c-render-proejct | 基于 ElementUI 的表单设计器
 
-[![MIT](https://img.shields.io/github/license/dream2023/f-render)](https://github.com/dream2023/f-render)
-![npm bundle size](https://img.shields.io/bundlephobia/minzip/f-render)
-![npm](https://img.shields.io/npm/dt/f-render)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4c2ddffb-26b2-4e64-8b22-25678db57483/deploy-status)](https://app.netlify.com/sites/f-render/deploys)
-![gitub pages](https://github.com/dream2023/f-render/workflows/gitub%20pages/badge.svg)
-[![Star on GitHub](https://img.shields.io/github/stars/dream2023/f-render.svg?style=social)](https://github.com/dream2023/f-render/stargazers)
-
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-
-
-- [Demo](#demo)
 - [教程](#%E6%95%99%E7%A8%8B)
 - [1 分钟快速接入](#1-%E5%88%86%E9%92%9F%E5%BF%AB%E9%80%9F%E6%8E%A5%E5%85%A5)
     - [第 1 步：安装](#%E7%AC%AC-1-%E6%AD%A5%E5%AE%89%E8%A3%85)
     - [第 2 步：注册](#%E7%AC%AC-2-%E6%AD%A5%E6%B3%A8%E5%86%8C)
     - [第 3 步：使用](#%E7%AC%AC-3-%E6%AD%A5%E4%BD%BF%E7%94%A8)
 - [用户模式](#%E7%94%A8%E6%88%B7%E6%A8%A1%E5%BC%8F)
-    - [基于 f-render 的配置](#%E5%9F%BA%E4%BA%8E-f-render-%E7%9A%84%E9%85%8D%E7%BD%AE)
+    - [基于 c-render-project 的配置](#%E5%9F%BA%E4%BA%8E-f-render-%E7%9A%84%E9%85%8D%E7%BD%AE)
     - [基于 vue-ele-form 的配置](#%E5%9F%BA%E4%BA%8E-vue-ele-form-%E7%9A%84%E9%85%8D%E7%BD%AE)
 - [定制化](#%E5%AE%9A%E5%88%B6%E5%8C%96)
   - [新增官方扩展组件（以富文本扩展为例）](#%E6%96%B0%E5%A2%9E%E5%AE%98%E6%96%B9%E6%89%A9%E5%B1%95%E7%BB%84%E4%BB%B6%E4%BB%A5%E5%AF%8C%E6%96%87%E6%9C%AC%E6%89%A9%E5%B1%95%E4%B8%BA%E4%BE%8B)
@@ -48,9 +35,9 @@
 
 ## 介绍
 
-f-render 是基于 [vue-ele-form](https://github.com/dream2023/vue-ele-form) 开发的可视化表单设计工具, 适用于 各种流程引擎和动态表单项目，大大节省你的开发时间；
+c-render-project 是基于 [vue-ele-form](https://github.com/dream2023/vue-ele-form) 开发的可视化表单设计工具, 适用于 各种流程引擎和动态表单项目，大大节省你的开发时间；
 
-[![f-render 演示图](./demo.webp)](https://dream2023.gitee.io/f-render/)
+
 
 ## 注意
 
@@ -62,15 +49,8 @@ f-render 是基于 [vue-ele-form](https://github.com/dream2023/vue-ele-form) 开
 - 体积小：Gzip 压缩后 `100k` 左右；
 - 易扩展：可以在`不更改源码`的情况下增删改属性、组件；
 
-## Demo
 
-[https://dream2023.gitee.io/f-render/](https://dream2023.gitee.io/f-render/)
 
-## 教程
-
-虽然 f-render 可以做到在不更改源码的情况下实现大量的定制化，但是依然有不少人希望能够根据公司的需求进行二次开发。
-
-所以我推出了一个从 0 实现整个项目的 [教程](https://www.lanqiao.cn/courses/2848)，如果感兴趣 f-render 的实现过程和思考，可以点击 [从 0 实现可视化表单组件](https://www.lanqiao.cn/courses/2848) 进行学习。
 
 ## 1 分钟快速接入
 
@@ -79,7 +59,7 @@ f-render 是基于 [vue-ele-form](https://github.com/dream2023/vue-ele-form) 开
 ```bash
 yarn add element-ui  # npm install element-ui -S
 yarn add vue-ele-form # npm install vue-ele-form -S
-yarn add f-render # npm install f-render -S
+yarn add c-render-project # npm install c-render-project -S
 ```
 
 #### 第 2 步：注册
@@ -87,20 +67,20 @@ yarn add f-render # npm install f-render -S
 ```js
 // vue-ele-form 的注册可参考：https://www.yuque.com/chaojie-vjiel/vbwzgu/xl46cd
 import EleForm from "vue-ele-form";
-import FRender from "f-render";
+import CRender from "c-render-project";
 import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 
 Vue.use(ElementUI);
 Vue.use(EleForm);
-Vue.component("f-render", FRender);
+Vue.component("c-render", CRender);
 ```
 
 #### 第 3 步：使用
 
 ```html
 <template>
-  <f-render
+  <c-render
     @save="handleSave"
     :loading="loading"
     height="calc(100vh - 60px)"
@@ -144,13 +124,13 @@ Vue.component("f-render", FRender);
 
 我们别分称这两个阶段的表单为设计模式和用户模式。设计模式的表单配置我们已经讲了，下面看用户模式下的表单配置：
 
-#### 基于 f-render 的配置
+#### 基于 c-render-project 的配置
 
 通过属性 `pure`, 可以直接做为表单使用，其数据提交方式同 `vue-ele-form` 一样，具体可查看[文档](https://www.yuque.com/chaojie-vjiel/vbwzgu/zbu9mn)。
 
 ```html
 <template>
-  <f-render
+  <c-render
     v-model="formData"
     :request-fn="handleSubmit"
     @request-success="handleSuccess"
@@ -191,7 +171,7 @@ Vue.component("f-render", FRender);
 
 #### 基于 vue-ele-form 的配置
 
-如果你的可视化设计和表单使用，不再一个系统，可以直接使用 `vue-ele-form`，不必安装 `f-render`，具体如下：
+如果你的可视化设计和表单使用，不再一个系统，可以直接使用 `vue-ele-form`，不必安装 `c-render-project`，具体如下：
 
 ```html
 <template>
@@ -258,7 +238,7 @@ Vue.component("quill-editor", EleFormQuillEditor);
 ```html
 <template>
   <!-- 省略其它属性 -->
-  <f-render :comps="comps" />
+  <c-render :comps="comps" />
 </template>
 
 <script>
@@ -348,7 +328,7 @@ export default {
 ```html
 <template>
   <!-- 省略其它属性 -->
-  <f-render :comps="comps" />
+  <c-render :comps="comps" />
 </template>
 
 <script>
@@ -390,7 +370,7 @@ export default {
 <template>
   <!-- 其它属性省略 -->
   <!-- 将更改后的 comps 传递过去即可 -->
-  <f-render :comps="comps" />
+  <c-render :comps="comps" />
 </template>
 
 <script>
@@ -451,7 +431,7 @@ export default {
 
 ## f-render 问答集锦
 
-- [1、f-render 不能做什么？](https://www.yuque.com/chaojie-vjiel/vbwzgu/adz8q8#0nlfc)
+- [1、c-render-project 不能做什么？](https://www.yuque.com/chaojie-vjiel/vbwzgu/adz8q8#0nlfc)
 - [2、怎么实现 options URL 配置？](https://www.yuque.com/chaojie-vjiel/vbwzgu/adz8q8#gvS8c)
 
 ## Props 说明
