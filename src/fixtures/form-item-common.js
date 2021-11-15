@@ -42,7 +42,7 @@ export default {
         rows: 10
       },
       tip:
-        '校检规则文档, 请<a target="_blank" href="https://www.yuque.com/chaojie-vjiel/vbwzgu/qzzkpd" class="el-link el-link--primary">点击查看</a>'
+        "校检规则文档, 请<a target=\"_blank\" href=\"https://www.yuque.com/chaojie-vjiel/vbwzgu/qzzkpd\" class=\"el-link el-link--primary\">点击查看</a>"
     },
     options: {
       type: "data-editor",
@@ -53,7 +53,7 @@ export default {
       },
       vif: data => data.isOptions,
       tip:
-        'options支持`API接口`、`数组`、`函数`、`Promise`等, 具体看<a target="_blank" href="https://www.yuque.com/chaojie-vjiel/vbwzgu/rgenav" class="el-link el-link--primary">文档</a>'
+        "options支持`API接口`、`数组`、`函数`、`Promise`等, 具体看<a target=\"_blank\" href=\"https://www.yuque.com/chaojie-vjiel/vbwzgu/rgenav\" class=\"el-link el-link--primary\">文档</a>"
     },
     prop: {
       type: "data-editor",
@@ -76,7 +76,7 @@ export default {
         types: ["function", "boolean"]
       },
       tip:
-        '支持`布尔值`和`函数`，具体请查看：<a target="_blank" href="https://www.yuque.com/chaojie-vjiel/vbwzgu/loffm6#wOVyc" class="el-link el-link--primary">文档</a>'
+        "支持`布尔值`和`函数`，具体请查看：<a target=\"_blank\" href=\"https://www.yuque.com/chaojie-vjiel/vbwzgu/loffm6#wOVyc\" class=\"el-link el-link--primary\">文档</a>"
     },
     disabled: {
       type: "data-editor",
@@ -85,7 +85,7 @@ export default {
         types: ["function", "boolean", "string"]
       },
       tip:
-        '支持`布尔值`和`函数`，具体请查看：<a target="_blank" href="https://www.yuque.com/chaojie-vjiel/vbwzgu/loffm6#zaIsz" class="el-link el-link--primary">文档</a>'
+        "支持`布尔值`和`函数`，具体请查看：<a target=\"_blank\" href=\"https://www.yuque.com/chaojie-vjiel/vbwzgu/loffm6#zaIsz\" class=\"el-link el-link--primary\">文档</a>"
     },
     tip: {
       type: "input",
@@ -126,6 +126,10 @@ export default {
       attrs: {
         types: ["function"]
       }
+    },
+    style: {
+      type: 'data-editor',
+      label: '样式配置'
     }
   },
   // 覆盖值
