@@ -66,16 +66,19 @@
     import formItemCommonDefault from "./fixtures/form-item-common";
     //表格组件
     import EleFormTableEditor from 'vue-ele-form-table-editor'
+    //树形选择组件
+    import EleFormTreeSelect from 'vue-ele-form-tree-select'
 
-
-    //引入表格
+    //引入表格配置
     import tableEditor from './fixtures/extends/table-editor'
+    //引入树形配置
+    import treeSelect from './fixtures/extends/tree-select'
     // 组件的数据，通过 provide / inject 的形式传递给子组件
     // 主要原因是因为组件嵌套过深，相当于一个状态管理
     // 在业务代码中不推荐使用，provide / inject，会使数据流混乱
     //注册表格逐渐
     Vue.component("table-editor",EleFormTableEditor);
-
+    Vue.component('tree-select', EleFormTreeSelect)
     export default {
         name: "f-render",
         inheritAttrs: false,
@@ -124,7 +127,7 @@
             // 组件列表
             comps: {
                 type: Array,
-                default: () => compsDefault.concat(tableEditor)
+                default: () => compsDefault.concat(tableEditor).concat(treeSelect)
             },
             // 操作配置
             operations: {

@@ -163,5 +163,9 @@ export default {
       }
     }
   },
-  data: {}
+  data: {
+    formAttrs: {
+      size: "mini"
+    }
+  }
 };
