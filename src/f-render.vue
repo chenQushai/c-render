@@ -204,6 +204,7 @@
       // 将表单项转为对象类型
       formItemList: {
         handler(list) {
+          console.log(list)
           this.formDesc = arrToObject(list, "field");
         },
         deep: true,
@@ -283,34 +284,30 @@
       },
       // 获取表单配置
       getFormConfig() {
-        let resultConfig = {
-          formConfig: {
-            // 表单属性
-            ...removeEmptyProps(this.formPropsData),
+        return {
+          // 表单属性
+          ...removeEmptyProps(this.formPropsData),
 
-            // 表单项
-            // _.mapValues 是遍历对象的值
-            formDesc: _.mapValues(
-              this.formDesc,
-              // 组件属性 attrs 和表单项属性 commonAttrs
-              ({ type, attrs, ...commonAttrs }) => {
-                const res = {
-                  type,
-                  ...removeEmptyProps(commonAttrs)
-                };
+          // 表单项
+          // _.mapValues 是遍历对象的值
+          formDesc: _.mapValues(
+            this.formDesc,
+            // 组件属性 attrs 和表单项属性 commonAttrs
+            ({ type, attrs, ...commonAttrs }) => {
+              const res = {
+                type,
+                ...removeEmptyProps(commonAttrs)
+              };
 
-                attrs = removeEmptyProps(attrs);
-                if (Object.keys(attrs).length) {
-                  res.attrs = attrs;
-                }
-                return res;
+              attrs = removeEmptyProps(attrs);
+              if (Object.keys(attrs).length) {
+                res.attrs = attrs;
               }
-            ),
-            order: Object.keys(this.formDesc)
-          },
-          currentIndex: this.currentIndex
+              return res;
+            }
+          ),
+          order: Object.keys(this.formDesc)
         };
-        return resultConfig;
       },
       // 设置表单属性默认值
       initFormPropsData() {
@@ -318,7 +315,11 @@
           this.formPropsData,
           cloneDeep(this.formProps.data)
         );
-      }
+      },
+      //外层修改formDesc
+      setFormDesc(attrs) {
+        this.formItemList[this.currentIndex].attrs = Object.assign(this.formItemList[this.currentIndex].attrs,attrs);
+      },
     },
     created() {
       // 设置表单属性默认值
