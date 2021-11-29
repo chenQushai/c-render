@@ -32,7 +32,8 @@ export default {
   },
   methods: {
     handleSave(res) {
-      localStorage.setItem("form-config", res);
+      console.log()
+      localStorage.setItem("form-config", JSON.stringify(JSON.parse(res).formConfig));
       this.$message.success("保存成功啦~");
     }
   },

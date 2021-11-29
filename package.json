@@ -1,6 +1,6 @@
 {
   "name": "c-render-project",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "基于element-ui 的表单设计器",
   "main": "./dist/f-render.umd.min.js",
   "scripts": {
